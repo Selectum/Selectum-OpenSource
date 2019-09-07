@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>nvOCDialog</class>
+ <widget class="QDialog" name="nvOCDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>666</width>
+    <height>264</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Overclocking</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+background-color: #11192C;
+}</string>
+  </property>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>103</y>
+     <width>108</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="text">
+    <string>Core Clock (MHz) :</string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="horizontalSliderFanSpeed">
+   <property name="geometry">
+    <rect>
+     <x>136</x>
+     <y>190</y>
+     <width>431</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSlider::groove:horizontal {
+    height: 8px; 
+    background: #CFD0D2;
+    border-radius: 4px;
+    padding: 0px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background: #F8CD26;
+    width: 17px;
+    margin: -5px 0;
+    height:17px;
+    border-radius: 8px;
+    border-width: 0px;
+}
+
+QSlider::sub-page:horizontal{
+    background: #366CB8;
+    border-radius: 4px;
+    height: 8px;
+}
+
+</string>
+   </property>
+   <property name="maximum">
+    <number>100</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBoxDevice">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>20</y>
+     <width>161</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox {
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+    border-width: 0px;
+}
+
+QComboBox:editable {
+    background:  #3D8ED6;
+}
+
+QComboBox:!editable, QComboBox::drop-down:editable {
+     background: #3D8ED6;
+}
+
+QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+    background: #3D8ED6;
+}
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+    border-left-width: 1px;
+    border-left-color: #366CB8;
+    border-left-style: solid; 
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    border-image: url(:/images/arrow_down.png) ;
+}
+
+QComboBox::down-arrow:on { /* shift the arrow when popup is open */
+    top: 1px;
+   
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>62</y>
+     <width>102</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="text">
+    <string>Power Limit (%) :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>22</y>
+     <width>52</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="text">
+    <string>Devices :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>144</y>
+     <width>109</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="text">
+    <string>Mem Clock (MHz) :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>190</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="text">
+    <string>Fan Speed (%) :</string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="horizontalSliderGpuOffset">
+   <property name="geometry">
+    <rect>
+     <x>136</x>
+     <y>103</y>
+     <width>431</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSlider::groove:horizontal {
+    height: 8px; 
+    background: #CFD0D2;
+    border-radius: 4px;
+    padding: 0px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background: #F8CD26;
+    width: 17px;
+    margin: -5px 0;
+    height:17px;
+    border-radius: 8px;
+    border-width: 0px;
+}
+
+QSlider::sub-page:horizontal{
+    background: #366CB8;
+    border-radius: 4px;
+    height: 8px;
+}
+
+</string>
+   </property>
+   <property name="minimum">
+    <number>-200</number>
+   </property>
+   <property name="maximum">
+    <number>200</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QSlider" name="horizontalSliderMemOffset">
+   <property name="geometry">
+    <rect>
+     <x>136</x>
+     <y>144</y>
+     <width>431</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSlider::groove:horizontal {
+    height: 8px; 
+    background: #CFD0D2;
+    border-radius: 4px;
+    padding: 0px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background: #F8CD26;
+    width: 17px;
+    margin: -5px 0;
+    height:17px;
+    border-radius: 8px;
+    border-width: 0px;
+}
+
+QSlider::sub-page:horizontal{
+    background: #366CB8;
+    border-radius: 4px;
+    height: 8px;
+}
+
+</string>
+   </property>
+   <property name="minimum">
+    <number>-1500</number>
+   </property>
+   <property name="maximum">
+    <number>1500</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="lcdNumberMemClock">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>144</y>
+     <width>64</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLCDNumber{
+	background-color: transparent;
+    color: #366CB8;
+}</string>
+   </property>
+   <property name="segmentStyle">
+    <enum>QLCDNumber::Flat</enum>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="lcdNumberGpuOffset">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>103</y>
+     <width>64</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLCDNumber{
+	background-color: transparent;
+    color: #366CB8;
+}</string>
+   </property>
+   <property name="segmentStyle">
+    <enum>QLCDNumber::Flat</enum>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="lcdNumberPowerPercent">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>62</y>
+     <width>64</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLCDNumber{
+	background-color: transparent;
+    color: #366CB8;
+}</string>
+   </property>
+   <property name="digitCount">
+    <number>5</number>
+   </property>
+   <property name="segmentStyle">
+    <enum>QLCDNumber::Flat</enum>
+   </property>
+  </widget>
+  <widget class="QSlider" name="horizontalSliderPowerPercent">
+   <property name="geometry">
+    <rect>
+     <x>136</x>
+     <y>62</y>
+     <width>431</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSlider::groove:horizontal {
+    height: 8px; 
+    background: #CFD0D2;
+    border-radius: 4px;
+    padding: 0px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background: #F8CD26;
+    width: 17px;
+    margin: -5px 0;
+    height:17px;
+    border-radius: 8px;
+    border-width: 0px;
+}
+
+QSlider::sub-page:horizontal{
+    background: #366CB8;
+    border-radius: 4px;
+    height: 8px;
+}
+
+</string>
+   </property>
+   <property name="minimum">
+    <number>50</number>
+   </property>
+   <property name="maximum">
+    <number>100</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBoxAutoSpeedFan">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>220</y>
+     <width>121</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox {
+    width: 13px;
+    height: 13px;
+}
+QCheckBox::indicator:unchecked {
+    border: 2px solid #366CB8;
+   border-radius: 2px;
+}
+
+QCheckBox::indicator:checked {
+   background: #F9CD28;
+   border: 2px solid #366CB8;
+   border-radius: 2px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Auto</string>
+   </property>
+   <property name="tristate">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBoxAllDevices">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>20</y>
+     <width>385</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox {
+    width: 13px;
+    height: 13px;
+}
+QCheckBox::indicator:unchecked {
+    border: 2px solid #366CB8;
+   border-radius: 2px;
+}
+
+QCheckBox::indicator:checked {
+   background: #F9CD28;
+   border: 2px solid #366CB8;
+   border-radius: 2px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Apply to all devices</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBoxOCMinerStart">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>20</y>
+     <width>214</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox {
+    width: 13px;
+    height: 13px;
+}
+QCheckBox::indicator:unchecked {
+    border: 2px solid #366CB8;
+   border-radius: 2px;
+}
+
+QCheckBox::indicator:checked {
+   background: #F9CD28;
+   border: 2px solid #366CB8;
+   border-radius: 2px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Apply on each miner restart</string>
+   </property>
+  </widget>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>220</y>
+     <width>461</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    border-radius: 15px;
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+    background-color: #71C8F3;
+	min-width:  100px;
+	min-height:  30px;
+    max-width:  100px;
+	max-height:  30px;
+    padding:  0;
+    margin: 0;
+}
+QPushButton:hover{
+    background-color: #3D8ED6;
+}
+QPushButton:hover:pressed{
+    background-color: #2F5BAC;
+}
+</string>
+   </property>
+   <property name="locale">
+    <locale language="English" country="UnitedStates"/>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Apply|QDialogButtonBox::Close</set>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="lcdNumberFanSpeed">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>190</y>
+     <width>64</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLCDNumber{
+	background-color: transparent;
+    color: #366CB8;
+}</string>
+   </property>
+   <property name="segmentStyle">
+    <enum>QLCDNumber::Flat</enum>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>nvOCDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>nvOCDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

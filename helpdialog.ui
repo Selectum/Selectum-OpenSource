@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>helpDialog</class>
+ <widget class="QDialog" name="helpDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>217</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Help</string>
+  </property>
+  <property name="whatsThis">
+   <string/>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog{
+background-color: #11192C;
+min-width: 500px;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0">
+   <item>
+    <widget class="QPlainTextEdit" name="plainTextEdit">
+     <property name="styleSheet">
+      <string notr="true">QPlainTextEdit{
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+	color: #CFD0D2;
+    background-color: transparent;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
+     </property>
+     <property name="lineWrapMode">
+      <enum>QPlainTextEdit::WidgetWidth</enum>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="plainText">
+      <string>Selectum is a GUI miners manager with abilities to run multiple algorythms and cryptocurrencies mining with lot of usefull features like: watchdog for restarting miner, autostart, enhanced displaying of miner output - highlighted successful solutions, shares &amp; zero hashrate, display  information for nVidia cards , power drawing - a minimum and a maximum from all cards, integrated overclocking of nVidia cards, integrated pools monitoring, etc.</string>
+     </property>
+     <property name="backgroundVisible">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignHCenter">
+    <widget class="QPushButton" name="pushButtonFinish">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>100</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 15px;
+	font: 85 10pt &quot;Arial&quot;;
+    background-color: #71C8F3;
+	min-width:  100px;
+	min-height:  30px;
+    max-width:  100px;
+	max-height:  30px;
+    padding:  0;
+    margin: 0;
+	qproperty-alignment: 'AlignHCenter';
+}
+QPushButton:hover{
+    background-color: #3D8ED6;
+}
+QPushButton:hover:pressed{
+    background-color: #2F5BAC;
+}
+</string>
+     </property>
+     <property name="locale">
+      <locale language="English" country="UnitedStates"/>
+     </property>
+     <property name="text">
+      <string>OK</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

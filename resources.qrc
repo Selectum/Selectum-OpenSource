@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>selectum.ico</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>icon.png</file>
+        <file>arrow_down.png</file>
+        <file>up.png</file>
+        <file>down.png</file>
+    </qresource>
+    <qresource prefix="/"/>
+</RCC>
